@@ -1,4 +1,4 @@
-[![CI-Release](https://github.com/wiiu-env/SDHotSwapModule/actions/workflows/ci.yml/badge.svg)](https://github.com/wiiu-env/SDHotSwapModule/actions/workflows/ci.yml)
+[![CI release](https://github.com/wiiu-env/SDHotSwapModule/actions/workflows/ci.yml/badge.svg)](https://github.com/wiiu-env/SDHotSwapModule/actions/workflows/ci.yml)
 
 ## SDHotSwapModule
 
@@ -10,7 +10,7 @@ Automatically (un)mounts the sd card when the sd card was inserted/ejected. See 
 1. Copy the file `SDHotSwapModule.wms` into `sd:/wiiu/environments/[ENVIRONMENT]/modules`.  
 2. Requires the [WUMSLoader](https://github.com/wiiu-env/WUMSLoader) in `sd:/wiiu/environments/[ENVIRONMENT]/modules/setup`.
 
-## Buildflags
+## Build flags
 
 ### Logging
 Building via `make` only logs errors (via OSReport). To enable logging via the [LoggingModule](https://github.com/wiiu-env/LoggingModule) set `DEBUG` to `1` or `VERBOSE`.
@@ -19,14 +19,14 @@ Building via `make` only logs errors (via OSReport). To enable logging via the [
 `make DEBUG=1` Enables information and error logging via [LoggingModule](https://github.com/wiiu-env/LoggingModule).  
 `make DEBUG=VERBOSE` Enables verbose information and error logging via [LoggingModule](https://github.com/wiiu-env/LoggingModule).
 
-If the [LoggingModule](https://github.com/wiiu-env/LoggingModule) is not present, it'll fallback to UDP (Port 4405) and [CafeOS](https://github.com/wiiu-env/USBSerialLoggingModule) logging.
+If the [LoggingModule](https://github.com/wiiu-env/LoggingModule) is not present, it'll fallback to UDP (port 4405) and [CafeOS](https://github.com/wiiu-env/USBSerialLoggingModule) logging.
 
 ## Building using the Dockerfile
 
-It's possible to use a docker image for building. This way you don't need anything installed on your host system.
+It's possible to use a Docker image for building. This way you don't need anything installed on your host system.
 
 ```
-# Build docker image (only needed once)
+# Build Docker image (only needed once)
 docker build . -t sdhotswapmodule-builder
 
 # make 
@@ -36,6 +36,6 @@ docker run -it --rm -v ${PWD}:/project sdhotswapmodule-builder make
 docker run -it --rm -v ${PWD}:/project sdhotswapmodule-builder make clean
 ```
 
-## Format the code via docker
+## Format the code via Docker
 
 `docker run --rm -v ${PWD}:/src ghcr.io/wiiu-env/clang-format:13.0.0-2 -r ./source -i`
