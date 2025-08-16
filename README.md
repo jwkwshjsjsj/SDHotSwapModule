@@ -2,7 +2,7 @@
 
 ## SDHotSwapModule
 
-Automatically (un)mounts the sd card when the sd card was inserted/ejected. See [libsdutils](https://github.com/wiiu-env/libsdutils) to have an easy way to register a callback for these events.
+Automatically (un)mounts the SD card when the SD card is inserted/ejected. See [libsdutils](https://github.com/wiiu-env/libsdutils) to have an easy way to register a callback for these events.
 
 ## Usage
 (`[ENVIRONMENT]` is a placeholder for the actual environment name.)
